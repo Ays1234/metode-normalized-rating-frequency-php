@@ -11,6 +11,7 @@ if (mysqli_connect_errno())
 
 <?php 
 
+if(isset($_POST['tolol'])) {
 
 if($_SERVER['REQUEST_METHOD'] == 'POST'){
     $mysqli = mysqli_connect("localhost","root","","checkbox");
@@ -39,9 +40,11 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 			if($mysqli->query($sql) === false) { // Jika gagal meng-insert data tampilkan pesan dibawah 'Perintah SQL Salah'
 			  trigger_error('Perintah SQL Salah: ' . $sql . ' Error: ' . $mysqli->error, E_USER_ERROR);
 			} else { // Jika berhasil alihkan ke halaman tampil.php
-			  header('location: ?m=datanft');
+			  header('location: ?m=nft');
 			}
   
+}
+
 }
 
 ?>
@@ -73,19 +76,19 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         <div class="form-inline">
         <h5>Faktor apa yang menjadi Modal?</h5>
 <div class="form-check form-check-inline">
-  <input class="form-check-input" type="checkbox" name="modal[]" id="inlineCheckbox1" value="1">
+  <input class="form-check-input a" type="checkbox" name="modal[]" id="inlineCheckbox1" value="1">
   <label class="form-check-label" for="inlineCheckbox1">1</label>
 
-  <input class="form-check-input" type="checkbox" name="modal[]" id="inlineCheckbox2" value="2">
+  <input class="form-check-input a" type="checkbox" name="modal[]" id="inlineCheckbox2" value="2">
   <label class="form-check-label" for="inlineCheckbox2">2</label>
 
-  <input class="form-check-input" type="checkbox" name="modal[]" id="inlineCheckbox1" value="3">
-  <label class="form-check-label" for="inlineCheckbox3">3</label>
+  <input class="form-check-input a" type="checkbox" name="modal[]" id="inlineCheckbox1" value="3">
+  <label class="form-check-label " for="inlineCheckbox3">3</label>
 
-  <input class="form-check-input" type="checkbox" name="modal[]" id="inlineCheckbox1" value="4">
-  <label class="form-check-label" for="inlineCheckbox1">4</label>
+  <input class="form-check-input a" type="checkbox" name="modal[]" id="inlineCheckbox1" value="4">
+  <label class="form-check-label " for="inlineCheckbox1">4</label>
 
-  <input class="form-check-input" type="checkbox" name="modal[]" id="inlineCheckbox1" value="5">
+  <input class="form-check-input a" type="checkbox" name="modal[]" id="inlineCheckbox1" value="5">
   <label class="form-check-label" for="inlineCheckbox1">5</label>
 </div>
 </div>
@@ -93,19 +96,19 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 <div class="form-inline">
     <h5>Faktor apa yang menjadi Keuangan?</h5>
 <div class="form-check form-check-inline">
-<input class="form-check-input" type="checkbox" name="keuangan[]" id="inlineCheckbox1" value="1">
+<input class="form-check-input b" type="checkbox" name="keuangan[]" id="inlineCheckbox1" value="1">
 <label class="form-check-label" for="inlineCheckbox1">1</label>
 
-<input class="form-check-input" type="checkbox" name="keuangan[]" id="inlineCheckbox2" value="2">
+<input class="form-check-input b" type="checkbox" name="keuangan[]" id="inlineCheckbox2" value="2">
 <label class="form-check-label" for="inlineCheckbox2">2</label>
 
-<input class="form-check-input" type="checkbox" name="keuangan[]" id="inlineCheckbox1" value="3">
+<input class="form-check-input b" type="checkbox" name="keuangan[]" id="inlineCheckbox1" value="3">
 <label class="form-check-label" for="inlineCheckbox3">3</label>
 
-<input class="form-check-input" type="checkbox" name="keuangan[]" id="inlineCheckbox1" value="4">
+<input class="form-check-input b" type="checkbox" name="keuangan[]" id="inlineCheckbox1" value="4">
 <label class="form-check-label" for="inlineCheckbox1">4</label>
 
-<input class="form-check-input" type="checkbox" name="keuangan[]" id="inlineCheckbox1" value="5">
+<input class="form-check-input b" type="checkbox" name="keuangan[]" id="inlineCheckbox1" value="5">
 <label class="form-check-label" for="inlineCheckbox1">5</label>
 </div>
 </div>
@@ -113,19 +116,19 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 <div class="form-inline">
     <h5>Faktor apa yang menjadi Produksi?</h5>
 <div class="form-check form-check-inline">
-<input class="form-check-input" type="checkbox" name="produksi[]" id="inlineCheckbox1" value="1">
+<input class="form-check-input c" type="checkbox" name="produksi[]" id="inlineCheckbox1" value="1">
 <label class="form-check-label" for="inlineCheckbox1">1</label>
 
-<input class="form-check-input" type="checkbox" name="produksi[]" id="inlineCheckbox2" value="2">
+<input class="form-check-input c" type="checkbox" name="produksi[]" id="inlineCheckbox2" value="2">
 <label class="form-check-label" for="inlineCheckbox2">2</label>
 
-<input class="form-check-input" type="checkbox" name="produksi[]" id="inlineCheckbox1" value="3">
+<input class="form-check-input c" type="checkbox" name="produksi[]" id="inlineCheckbox1" value="3">
 <label class="form-check-label" for="inlineCheckbox3">3</label>
 
-<input class="form-check-input" type="checkbox" name="produksi[]" id="inlineCheckbox1" value="4">
+<input class="form-check-input c" type="checkbox" name="produksi[]" id="inlineCheckbox1" value="4">
 <label class="form-check-label" for="inlineCheckbox1">4</label>
 
-<input class="form-check-input" type="checkbox" name="produksi[]" id="inlineCheckbox1" value="5">
+<input class="form-check-input c" type="checkbox" name="produksi[]" id="inlineCheckbox1" value="5">
 <label class="form-check-label" for="inlineCheckbox1">5</label>
 </div>
 </div>
@@ -133,19 +136,19 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 <div class="form-inline">
     <h5>Faktor apa yang menjadi Inovasi?</h5>
 <div class="form-check form-check-inline">
-<input class="form-check-input" type="checkbox" name="inovasi[]" id="inlineCheckbox1" value="1">
+<input class="form-check-input d" type="checkbox" name="inovasi[]" id="inlineCheckbox1" value="1">
 <label class="form-check-label" for="inlineCheckbox1">1</label>
 
-<input class="form-check-input" type="checkbox" name="inovasi[]" id="inlineCheckbox2" value="2">
+<input class="form-check-input d" type="checkbox" name="inovasi[]" id="inlineCheckbox2" value="2">
 <label class="form-check-label" for="inlineCheckbox2">2</label>
 
-<input class="form-check-input" type="checkbox" name="inovasi[]" id="inlineCheckbox1" value="3">
+<input class="form-check-input d" type="checkbox" name="inovasi[]" id="inlineCheckbox1" value="3">
 <label class="form-check-label" for="inlineCheckbox3">3</label>
 
-<input class="form-check-input" type="checkbox" name="inovasi[]" id="inlineCheckbox1" value="4">
+<input class="form-check-input d" type="checkbox" name="inovasi[]" id="inlineCheckbox1" value="4">
 <label class="form-check-label" for="inlineCheckbox1">4</label>
 
-<input class="form-check-input" type="checkbox" name="inovasi[]" id="inlineCheckbox1" value="5">
+<input class="form-check-input d" type="checkbox" name="inovasi[]" id="inlineCheckbox1" value="5">
 <label class="form-check-label" for="inlineCheckbox1">5</label>
 </div>
 </div>
@@ -153,19 +156,19 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 <div class="form-inline">
         <h5>Faktor apa yang menjadi Distribusi?</h5>
 <div class="form-check form-check-inline">
-  <input class="form-check-input" type="checkbox" name="distribusi[]" id="inlineCheckbox1" value="1">
+  <input class="form-check-input e" type="checkbox" name="distribusi[]" id="inlineCheckbox1" value="1">
   <label class="form-check-label" for="inlineCheckbox1">1</label>
 
-  <input class="form-check-input" type="checkbox" name="distribusi[]" id="inlineCheckbox2" value="2">
+  <input class="form-check-input e" type="checkbox" name="distribusi[]" id="inlineCheckbox2" value="2">
   <label class="form-check-label" for="inlineCheckbox2">2</label>
 
-  <input class="form-check-input" type="checkbox" name="distribusi[]" id="inlineCheckbox1" value="3">
+  <input class="form-check-input e" type="checkbox" name="distribusi[]" id="inlineCheckbox1" value="3">
   <label class="form-check-label" for="inlineCheckbox3">3</label>
 
-  <input class="form-check-input" type="checkbox" name="distribusi[]" id="inlineCheckbox1" value="4">
+  <input class="form-check-input e" type="checkbox" name="distribusi[]" id="inlineCheckbox1" value="4">
   <label class="form-check-label" for="inlineCheckbox1">4</label>
 
-  <input class="form-check-input" type="checkbox" name="distribusi[]" id="inlineCheckbox1" value="5">
+  <input class="form-check-input e" type="checkbox" name="distribusi[]" id="inlineCheckbox1" value="5">
   <label class="form-check-label" for="inlineCheckbox1">5</label>
 </div>
 </div>
@@ -173,19 +176,19 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 <div class="form-inline">
         <h5>Faktor apa yang menjadi Online?</h5>
 <div class="form-check form-check-inline">
-  <input class="form-check-input" type="checkbox" name="online[]" id="inlineCheckbox1" value="1">
+  <input class="form-check-input f" type="checkbox" name="online[]" id="inlineCheckbox1" value="1">
   <label class="form-check-label" for="inlineCheckbox1">1</label>
 
-  <input class="form-check-input" type="checkbox" name="online[]" id="inlineCheckbox2" value="2">
+  <input class="form-check-input f" type="checkbox" name="online[]" id="inlineCheckbox2" value="2">
   <label class="form-check-label" for="inlineCheckbox2">2</label>
 
-  <input class="form-check-input" type="checkbox" name="online[]" id="inlineCheckbox1" value="3">
+  <input class="form-check-input f" type="checkbox" name="online[]" id="inlineCheckbox1" value="3">
   <label class="form-check-label" for="inlineCheckbox3">3</label>
 
-  <input class="form-check-input" type="checkbox" name="online[]" id="inlineCheckbox1" value="4">
+  <input class="form-check-input f" type="checkbox" name="online[]" id="inlineCheckbox1" value="4">
   <label class="form-check-label" for="inlineCheckbox1">4</label>
 
-  <input class="form-check-input" type="checkbox" name="online[]" id="inlineCheckbox1" value="5">
+  <input class="form-check-input f" type="checkbox" name="online[]" id="inlineCheckbox1" value="5">
   <label class="form-check-label" for="inlineCheckbox1">5</label>
 </div>
 </div>
@@ -193,19 +196,19 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 <div class="form-inline">
         <h5>Faktor apa yang menjadi Brand?</h5>
 <div class="form-check form-check-inline">
-  <input class="form-check-input" type="checkbox" name="brand[]" id="inlineCheckbox1" value="1">
+  <input class="form-check-input g" type="checkbox" name="brand[]" id="inlineCheckbox1" value="1">
   <label class="form-check-label" for="inlineCheckbox1">1</label>
 
-  <input class="form-check-input" type="checkbox" name="brand[]" id="inlineCheckbox2" value="2">
+  <input class="form-check-input g" type="checkbox" name="brand[]" id="inlineCheckbox2" value="2">
   <label class="form-check-label" for="inlineCheckbox2">2</label>
 
-  <input class="form-check-input" type="checkbox" name="brand[]" id="inlineCheckbox1" value="3">
+  <input class="form-check-input g" type="checkbox" name="brand[]" id="inlineCheckbox1" value="3">
   <label class="form-check-label" for="inlineCheckbox3">3</label>
 
-  <input class="form-check-input" type="checkbox" name="brand[]" id="inlineCheckbox1" value="4">
+  <input class="form-check-input g" type="checkbox" name="brand[]" id="inlineCheckbox1" value="4">
   <label class="form-check-label" for="inlineCheckbox1">4</label>
 
-  <input class="form-check-input" type="checkbox" name="brand[]" id="inlineCheckbox1" value="5">
+  <input class="form-check-input g" type="checkbox" name="brand[]" id="inlineCheckbox1" value="5">
   <label class="form-check-label" for="inlineCheckbox1">5</label>
 </div>
 </div>
@@ -213,19 +216,19 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 <div class="form-inline">
         <h5>Faktor apa yang menjadi Izin?</h5>
 <div class="form-check form-check-inline">
-  <input class="form-check-input" type="checkbox" name="izin[]" id="inlineCheckbox1" value="1">
+  <input class="form-check-input h" type="checkbox" name="izin[]" id="inlineCheckbox1" value="1">
   <label class="form-check-label" for="inlineCheckbox1">1</label>
 
-  <input class="form-check-input" type="checkbox" name="izin[]" id="inlineCheckbox2" value="2">
+  <input class="form-check-input h" type="checkbox" name="izin[]" id="inlineCheckbox2" value="2">
   <label class="form-check-label" for="inlineCheckbox2">2</label>
 
-  <input class="form-check-input" type="checkbox" name="izin[]" id="inlineCheckbox1" value="3">
+  <input class="form-check-input h" type="checkbox" name="izin[]" id="inlineCheckbox1" value="3">
   <label class="form-check-label" for="inlineCheckbox3">3</label>
 
-  <input class="form-check-input" type="checkbox" name="izin[]" id="inlineCheckbox1" value="4">
+  <input class="form-check-input h" type="checkbox" name="izin[]" id="inlineCheckbox1" value="4">
   <label class="form-check-label" for="inlineCheckbox1">4</label>
 
-  <input class="form-check-input" type="checkbox" name="izin[]" id="inlineCheckbox1" value="5">
+  <input class="form-check-input h" type="checkbox" name="izin[]" id="inlineCheckbox1" value="5">
   <label class="form-check-label" for="inlineCheckbox1">5</label>
 </div>
 </div>
@@ -233,19 +236,19 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 <div class="form-inline">
     <h5>Faktor apa yang menjadi Teknologi?</h5>
 <div class="form-check form-check-inline">
-<input class="form-check-input" type="checkbox" name="teknologi[]" id="inlineCheckbox1" value="1">
+<input class="form-check-input i" type="checkbox" name="teknologi[]" id="inlineCheckbox1" value="1">
 <label class="form-check-label" for="inlineCheckbox1">1</label>
 
-<input class="form-check-input" type="checkbox" name="teknologi[]" id="inlineCheckbox2" value="2">
+<input class="form-check-input i" type="checkbox" name="teknologi[]" id="inlineCheckbox2" value="2">
 <label class="form-check-label" for="inlineCheckbox2">2</label>
 
-<input class="form-check-input" type="checkbox" name="teknologi[]" id="inlineCheckbox1" value="3">
+<input class="form-check-input i" type="checkbox" name="teknologi[]" id="inlineCheckbox1" value="3">
 <label class="form-check-label" for="inlineCheckbox3">3</label>
 
-<input class="form-check-input" type="checkbox" name="teknologi[]" id="inlineCheckbox1" value="4">
+<input class="form-check-input i" type="checkbox" name="teknologi[]" id="inlineCheckbox1" value="4">
 <label class="form-check-label" for="inlineCheckbox1">4</label>
 
-<input class="form-check-input" type="checkbox" name="teknologi[]" id="inlineCheckbox1" value="5">
+<input class="form-check-input i" type="checkbox" name="teknologi[]" id="inlineCheckbox1" value="5">
 <label class="form-check-label" for="inlineCheckbox1">5</label>
 </div>
 </div>
@@ -253,19 +256,19 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 <div class="form-inline">
     <h5>Faktor apa yang menjadi SDM?</h5>
 <div class="form-check form-check-inline">
-<input class="form-check-input" type="checkbox" name="sdm[]" id="inlineCheckbox1" value="1">
+<input class="form-check-input j" type="checkbox" name="sdm[]" id="inlineCheckbox1" value="1">
 <label class="form-check-label" for="inlineCheckbox1">1</label>
 
-<input class="form-check-input" type="checkbox" name="sdm[]" id="inlineCheckbox2" value="2">
+<input class="form-check-input j" type="checkbox" name="sdm[]" id="inlineCheckbox2" value="2">
 <label class="form-check-label" for="inlineCheckbox2">2</label>
 
-<input class="form-check-input" type="checkbox" name="sdm[]" id="inlineCheckbox1" value="3">
+<input class="form-check-input j" type="checkbox" name="sdm[]" id="inlineCheckbox1" value="3">
 <label class="form-check-label" for="inlineCheckbox3">3</label>
 
-<input class="form-check-input" type="checkbox" name="sdm[]" id="inlineCheckbox1" value="4">
+<input class="form-check-input j" type="checkbox" name="sdm[]" id="inlineCheckbox1" value="4">
 <label class="form-check-label" for="inlineCheckbox1">4</label>
 
-<input class="form-check-input" type="checkbox" name="sdm[]" id="inlineCheckbox1" value="5">
+<input class="form-check-input j" type="checkbox" name="sdm[]" id="inlineCheckbox1" value="5">
 <label class="form-check-label" for="inlineCheckbox1">5</label>
 </div>
 </div>
@@ -273,19 +276,19 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 <div class="form-inline">
     <h5>Faktor apa yang menjadi Waktu?</h5>
 <div class="form-check form-check-inline">
-<input class="form-check-input" type="checkbox" name="waktu[]" id="inlineCheckbox1" value="1">
+<input class="form-check-input k" type="checkbox" name="waktu[]" id="inlineCheckbox1" value="1">
 <label class="form-check-label" for="inlineCheckbox1">1</label>
 
-<input class="form-check-input" type="checkbox" name="waktu[]" id="inlineCheckbox2" value="2">
+<input class="form-check-input k" type="checkbox" name="waktu[]" id="inlineCheckbox2" value="2">
 <label class="form-check-label" for="inlineCheckbox2">2</label>
 
-<input class="form-check-input" type="checkbox" name="waktu[]" id="inlineCheckbox1" value="3">
+<input class="form-check-input k" type="checkbox" name="waktu[]" id="inlineCheckbox1" value="3">
 <label class="form-check-label" for="inlineCheckbox3">3</label>
 
-<input class="form-check-input" type="checkbox" name="waktu[]" id="inlineCheckbox1" value="4">
+<input class="form-check-input k" type="checkbox" name="waktu[]" id="inlineCheckbox1" value="4">
 <label class="form-check-label" for="inlineCheckbox1">4</label>
 
-<input class="form-check-input" type="checkbox" name="waktu[]" id="inlineCheckbox1" value="5">
+<input class="form-check-input k" type="checkbox" name="waktu[]" id="inlineCheckbox1" value="5">
 <label class="form-check-label" for="inlineCheckbox1">5</label>
 </div>
 </div>
@@ -293,19 +296,19 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 <div class="form-inline">
     <h5>Faktor apa yang menjadi Loyalitas?</h5>
 <div class="form-check form-check-inline">
-<input class="form-check-input" type="checkbox" name="loyalitas[]" id="inlineCheckbox1" value="1">
+<input class="form-check-input l" type="checkbox" name="loyalitas[]" id="inlineCheckbox1" value="1">
 <label class="form-check-label" for="inlineCheckbox1">1</label>
 
-<input class="form-check-input" type="checkbox" name="loyalitas[]" id="inlineCheckbox2" value="2">
+<input class="form-check-input l" type="checkbox" name="loyalitas[]" id="inlineCheckbox2" value="2">
 <label class="form-check-label" for="inlineCheckbox2">2</label>
 
-<input class="form-check-input" type="checkbox" name="loyalitas[]" id="inlineCheckbox1" value="3">
+<input class="form-check-input l" type="checkbox" name="loyalitas[]" id="inlineCheckbox1" value="3">
 <label class="form-check-label" for="inlineCheckbox3">3</label>
 
-<input class="form-check-input" type="checkbox" name="loyalitas[]" id="inlineCheckbox1" value="4">
+<input class="form-check-input l" type="checkbox" name="loyalitas[]" id="inlineCheckbox1" value="4">
 <label class="form-check-label" for="inlineCheckbox1">4</label>
 
-<input class="form-check-input" type="checkbox" name="loyalitas[]" id="inlineCheckbox1" value="5">
+<input class="form-check-input l" type="checkbox" name="loyalitas[]" id="inlineCheckbox1" value="5">
 <label class="form-check-label" for="inlineCheckbox1">5</label>
 </div>
 </div>
@@ -314,7 +317,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
 
             <div class="form-group">
-                <button name="tolol" class="btn btn-primary"><span class="glyphicon glyphicon-save"></span> Simpan</button>
+			<input class="btn btn-primary" type="submit" name="tolol" value="Simpan">
                 <a class="btn btn-danger" href="?m=nilai"><span class="glyphicon glyphicon-arrow-left"></span> Kembali</a>
             </div>
         </form>
@@ -5207,7 +5210,54 @@ echo"
 ?>
 
 <script>
-    $('input[type="checkbox"]').on('change', function() {
-    $('input[name="' + this.name + '"]').not(this).prop('checked', false);
-});
+   $('.a').on('change', function() {
+            $('.a').not(this).prop('checked',false);
+    });
+
+	$('.b').on('change', function() {
+            $('.b').not(this).prop('checked',false);
+    });
+
+
+	$('.c').on('change', function() {
+            $('.c').not(this).prop('checked',false);
+    });
+
+	$('.d').on('change', function() {
+            $('.d').not(this).prop('checked',false);
+    });
+
+	$('.e').on('change', function() {
+            $('.e').not(this).prop('checked',false);
+    });
+
+	$('.f').on('change', function() {
+            $('.f').not(this).prop('checked',false);
+    });
+
+
+	$('.g').on('change', function() {
+            $('.g').not(this).prop('checked',false);
+    });
+
+	$('.h').on('change', function() {
+            $('.h').not(this).prop('checked',false);
+    });
+
+	$('.i').on('change', function() {
+            $('.i').not(this).prop('checked',false);
+    });
+
+	$('.j').on('change', function() {
+            $('.j').not(this).prop('checked',false);
+    });
+
+	$('.k').on('change', function() {
+            $('.k').not(this).prop('checked',false);
+    });
+
+	$('.l').on('change', function() {
+            $('.l').not(this).prop('checked',false);
+    });
+
 </script>
